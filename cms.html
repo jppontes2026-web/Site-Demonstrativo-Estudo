@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMS — Pulse News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo"><span>P</span> PULSE</a>
+    <button class="menu-toggle">☰</button>
+
+    <nav class="nav-links">
+      <a href="index.html">Ver portal</a>
+      <a href="noticias/economia.html">Economia</a>
+      <a href="noticias/esportes.html">Esportes</a>
+      <a href="noticias/tecnologia.html">Tecnologia</a>
+      <a href="noticias/cultura.html">Cultura</a>
+    </nav>
+
+    <div class="nav-actions">
+      <span id="adminName"></span>
+      <button id="logoutBtn" class="btn btn-outline">Sair</button>
+    </div>
+  </header>
+
+  <main class="container cms-page">
+    <div class="cms-header">
+      <div>
+        <span class="eyebrow">ADMINISTRAÇÃO</span>
+        <h1>Central de conteúdo</h1>
+        <p>Cadastre, edite e gerencie as notícias do portal.</p>
+      </div>
+    </div>
+
+    <div id="cmsMessage"></div>
+
+    <section class="cms-layout">
+      <div class="panel">
+        <h2 id="formTitle">Nova notícia</h2>
+
+        <form id="newsForm">
+          <input type="hidden" id="newsId">
+
+          <label>Título</label>
+          <input id="newsTitle" type="text" required placeholder="Título da notícia">
+
+          <label>Resumo</label>
+          <textarea id="newsExcerpt" rows="3" required placeholder="Resumo da notícia"></textarea>
+
+          <label>Conteúdo</label>
+          <textarea id="newsContent" rows="10" required placeholder="Conteúdo completo"></textarea>
+
+          <label>Categoria</label>
+          <select id="newsCategory" required>
+            <option value="Economia">Economia</option>
+            <option value="Esportes">Esportes</option>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Cultura">Cultura</option>
+          </select>
+
+          <label>URL da imagem</label>
+          <input id="newsImage" type="url" required placeholder="https://...">
+
+          <div class="form-actions">
+            <button class="btn btn-red" type="submit">Salvar notícia</button>
+            <button class="btn btn-outline hidden" type="button" id="cancelEdit">Cancelar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel-heading">
+          <h2>Notícias cadastradas</h2>
+          <span id="newsCount"></span>
+        </div>
+
+        <div id="adminNewsList" class="admin-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

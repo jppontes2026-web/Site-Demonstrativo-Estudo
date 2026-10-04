@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Pulse News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+<body class="auth-page">
+
+  <a href="../index.html" class="auth-logo"><span>P</span> PULSE</a>
+
+    <a href="../index.html" class="btn-voltar">← Voltar</a>
+
+
+  <main class="auth-box">
+    <div class="auth-card">
+      <span class="eyebrow">BEM-VINDO</span>
+      <h1>Entrar</h1>
+      <p class="muted">Acesse sua conta Pulse News.</p>
+
+      <div id="loginMessage"></div>
+
+      <form id="loginForm">
+        <label>E-mail</label>
+        <input id="loginEmail" type="email" placeholder="seu@email.com" required>
+
+        <label>Senha</label>
+        <input id="loginPassword" type="password" placeholder="Sua senha" required>
+
+        <button class="btn btn-red btn-full" type="submit">Entrar</button>
+      </form>
+
+      <p class="auth-footer">
+        Ainda não possui conta?
+        <a href="cadastro.html">Criar conta</a>
+      </p>
+
+      <div class="demo-login">
+        <strong>Conta administrativa para teste</strong>
+        <small>E-mail: admin@pulsenews.com</small>
+        <small>Senha: admin123</small>
+      </div>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco — Pulse News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo"><span>P</span> PULSE</a>
+    <button class="menu-toggle">☰</button>
+
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="noticias/economia.html">Economia</a>
+      <a href="noticias/esportes.html">Esportes</a>
+      <a href="noticias/tecnologia.html">Tecnologia</a>
+      <a href="noticias/cultura.html">Cultura</a>
+      <a href="fale-conosco.html">Fale conosco</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="cadastro_login/login.html" id="loginLink" class="btn btn-red">Entrar</a>
+      <a href="cms.html" id="cmsLink" class="btn btn-red hidden">CMS</a>
+      <button id="logoutBtn" class="btn btn-outline hidden">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <span class="eyebrow">CONTATO</span>
+        <h1>Fale conosco</h1>
+        <p>Envie sua dúvida, sugestão ou feedback. Sua opinião ajuda o Pulse a melhorar.</p>
+      </div>
+    </section>
+
+    <section class="container section-space">
+      <form id="feedbackForm" class="feedback-form">
+        <label for="fbName">Nome</label>
+        <input type="text" id="fbName" required>
+
+        <label for="fbEmail">E-mail</label>
+        <input type="email" id="fbEmail" required>
+
+        <label for="fbType">Assunto</label>
+        <select id="fbType">
+          <option>Feedback</option>
+          <option>Sugestão</option>
+          <option>Dúvida</option>
+          <option>Reclamação</option>
+        </select>
+
+        <label for="fbText">Mensagem</label>
+        <textarea id="fbText" rows="6" required></textarea>
+
+        <button type="submit" class="btn btn-red">Enviar mensagem</button>
+        <div id="feedbackMessage"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">© 2026 Pulse News.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
